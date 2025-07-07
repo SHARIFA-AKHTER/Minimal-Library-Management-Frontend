@@ -39,8 +39,8 @@ export default function BorrowSummaryPage() {
           <tbody className="divide-y divide-gray-100">
             {data?.map((borrow) => (
               <tr key={borrow._id}>
-                <td className="px-4 py-2 whitespace-nowrap">{borrow.bookTitle || "N/A"}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-center">{borrow.isbn || "N/A"}</td>
+                <td className="px-4 py-2 whitespace-nowrap">{borrow.book?.title || "N/A"}</td>
+                <td className="px-4 py-2 whitespace-nowrap text-center">{borrow.book?.isbn || "N/A"}</td>
                 <td className="px-4 py-2 whitespace-nowrap text-center">{borrow.totalQuantityBorrowed}</td>
               </tr>
             ))}

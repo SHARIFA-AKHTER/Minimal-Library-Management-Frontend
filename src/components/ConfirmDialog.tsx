@@ -1,5 +1,7 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/Dialog";
+
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { Button } from "./ui/button";
+import { DialogFooter, DialogHeader } from "./ui/dialog";
 
 
 interface ConfirmDialogProps {
