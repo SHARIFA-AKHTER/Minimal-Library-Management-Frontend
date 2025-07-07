@@ -9,7 +9,7 @@ import BorrowForm from "@/components/BorrowForm";
 export default function BorrowPage() {
   const { bookId } = useParams();
   const navigate = useNavigate();
-  
+
   const { data: book, isLoading } = useGetBookByIdQuery(bookId!);
   const [borrowBook, { isLoading: isBorrowing }] = useBorrowBookMutation();
 
@@ -37,7 +37,7 @@ export default function BorrowPage() {
   }
   try {
     console.log("📦 Borrow Payload:", {
-      bookId: book._id,
+      book: book._id,
       quantity: data.quantity,
       dueDate: data.dueDate,
     });
